@@ -1,0 +1,1 @@
+Create etsy ready selling template for a digital product listing.
