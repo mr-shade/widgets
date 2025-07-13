@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧪 Widget Test Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #1a1a1a;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .widget-frame {
+            width: 100%;
+            height: 600px;
+            border: 2px solid #333;
+            border-radius: 12px;
+            overflow: hidden;
+            background: black;
+        }
+        .test-info {
+            background: #333;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .test-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .test-link {
+            background: #ff6b6b;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: opacity 0.3s;
+        }
+        .test-link:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <div class="test-info">
+            <h1>⚡ Subathon Timer Widget - Test Page</h1>
+            <p>This page helps you test your widget before adding it to OBS.</p>
+            <p><strong>Status:</strong> <span id="status">Loading...</span></p>
+            
+            <div class="test-links">
+                <a href="widget/index.html" class="test-link" target="_blank">Open Main Widget</a>
+                <a href="widget/demo.html" class="test-link" target="_blank">Open Demo Version</a>
+                <a href="#" class="test-link" onclick="reloadWidget()">Reload Widget</a>
+            </div>
+        </div>
+        
+        <iframe src="widget/index.html" class="widget-frame" id="widget-frame"></iframe>
+    </div>
+
+    <script>
+        function reloadWidget() {
+            document.getElementById('widget-frame').src = 'widget/index.html?' + Date.now();
+        }
+        
+        // Check if widget loads successfully
+        document.getElementById('widget-frame').onload = function() {
+            document.getElementById('status').textContent = '✅ Widget loaded successfully!';
+            document.getElementById('status').style.color = '#4ecdc4';
+        };
+        
+        document.getElementById('widget-frame').onerror = function() {
+            document.getElementById('status').textContent = '❌ Widget failed to load';
+            document.getElementById('status').style.color = '#ff6b6b';
+        };
+    </script>
+</body>
+</html>

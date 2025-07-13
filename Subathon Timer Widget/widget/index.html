@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Premium Subathon Timer Widget</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-container"></div>
+    
+    <!-- Main Timer Container -->
+    <div class="timer-container">
+        <!-- Header -->
+        <div class="timer-header">
+            <div class="timer-icon">✨</div>
+            <h1 class="timer-title">Premium Subathon Timer</h1>
+            <div class="live-indicator">
+                <span class="live-dot"></span>
+                LIVE
+            </div>
+        </div>
+
+        <!-- Main Timer Display -->
+        <div class="main-timer">
+            <div class="timer-display">
+                <div class="time-segment shimmer-effect">
+                    <span class="time-value" id="hours">01</span>
+                    <span class="time-label">HOURS</span>
+                </div>
+                <div class="time-separator">:</div>
+                <div class="time-segment shimmer-effect">
+                    <span class="time-value" id="minutes">30</span>
+                    <span class="time-label">MINUTES</span>
+                </div>
+                <div class="time-separator">:</div>
+                <div class="time-segment shimmer-effect">
+                    <span class="time-value" id="seconds">45</span>
+                    <span class="time-label">SECONDS</span>
+                </div>
+            </div>
+            
+            <!-- Timer Status -->
+            <div class="timer-status" id="timer-status">
+                ⏰ Time remaining until stream ends
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-container">
+            <div class="stat-item interactive-hover glow-primary">
+                <div class="stat-icon">👥</div>
+                <div class="stat-content">
+                    <span class="stat-value" id="sub-count">247</span>
+                    <span class="stat-label">Subscribers</span>
+                </div>
+            </div>
+            <div class="stat-item interactive-hover glow-secondary">
+                <div class="stat-icon">💎</div>
+                <div class="stat-content">
+                    <span class="stat-value" id="bit-count">12.5K</span>
+                    <span class="stat-label">Bits</span>
+                </div>
+            </div>
+            <div class="stat-item interactive-hover glow-accent">
+                <div class="stat-icon">💰</div>
+                <div class="stat-content">
+                    <span class="stat-value" id="tip-count">$892</span>
+                    <span class="stat-label">Tips</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-label">
+                <span>🎯 Progress to Next Milestone</span>
+                <span id="progress-percentage">68%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill" style="width: 68%"></div>
+                <div class="progress-glow"></div>
+            </div>
+        </div>
+
+        <!-- Current Milestone -->
+        <div class="milestone-container interactive-hover" id="milestone-container">
+            <div class="milestone-header">
+                <span class="milestone-icon">🏆</span>
+                <span class="milestone-title">Next Milestone</span>
+            </div>
+            <div class="milestone-content">
+                <div class="milestone-goal" id="milestone-goal">300 Subscribers</div>
+                <div class="milestone-reward" id="milestone-reward">🎮 New Game Reveal + Special Stream Event!</div>
+            </div>
+        </div>
+
+        <!-- Recent Events -->
+        <div class="events-container">
+            <div class="events-header">
+                <span class="events-icon">⚡</span>
+                <span class="events-title">Recent Activity</span>
+            </div>
+            <div class="events-list" id="events-list">
+                <div class="event-item">
+                    <span class="event-type">SUB</span>
+                    <span class="event-user">StreamerFan123</span>
+                    <span class="event-time">+5:00</span>
+                </div>
+                <div class="event-item">
+                    <span class="event-type">BITS</span>
+                    <span class="event-user">TechNinja42</span>
+                    <span class="event-time">+2:30</span>
+                </div>
+                <div class="event-item">
+                    <span class="event-type">TIP</span>
+                    <span class="event-user">GenerousViewer</span>
+                    <span class="event-time">+10:00</span>
+                </div>
+                <div class="event-item">
+                    <span class="event-type">SUB</span>
+                    <span class="event-user">NewFollower99</span>
+                    <span class="event-time">+5:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Celebration Overlay -->
+    <div class="celebration-overlay" id="celebration-overlay">
+        <div class="celebration-content">
+            <div class="celebration-icon">🎉</div>
+            <div class="celebration-text" id="celebration-text">Milestone Reached!</div>
+            <div class="celebration-subtext" id="celebration-subtext">Amazing work, community! 🚀</div>
+        </div>
+    </div>
+
+    <!-- Alert Notifications -->
+    <div class="alert-container" id="alert-container"></div>
+
+    <script src="main.js"></script>
+    <script src="tech-elements.js"></script>
+</body>
+</html>

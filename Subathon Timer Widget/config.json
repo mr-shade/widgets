@@ -1,0 +1,61 @@
+{
+  "streamElementsToken": "YOUR_STREAMELEMENTS_TOKEN_HERE",
+  "initialTime": 3600,
+  "timePerSub": 300,
+  "timePerBit": 1,
+  "timePerTip": 60,
+  "milestones": [
+    {
+      "id": 1,
+      "goal": 50,
+      "type": "subs",
+      "title": "50 Subs Milestone!",
+      "reward": "New game reveal!",
+      "color": "#ff6b6b"
+    },
+    {
+      "id": 2,
+      "goal": 100,
+      "type": "subs",
+      "title": "100 Subs Celebration!",
+      "reward": "Subscriber-only Discord access",
+      "color": "#4ecdc4"
+    },
+    {
+      "id": 3,
+      "goal": 200,
+      "type": "subs",
+      "title": "200 Subs Party!",
+      "reward": "Custom emote creation stream",
+      "color": "#45b7d1"
+    },
+    {
+      "id": 4,
+      "goal": 500,
+      "type": "subs",
+      "title": "500 Subs MEGA Goal!",
+      "reward": "24-hour stream marathon",
+      "color": "#f9ca24"
+    },
+    {
+      "id": 5,
+      "goal": 1000,
+      "type": "subs",
+      "title": "1K SUBS LEGENDARY!",
+      "reward": "Face reveal + Q&A",
+      "color": "#6c5ce7"
+    }
+  ],
+  "theme": {
+    "primaryColor": "#ff6b6b",
+    "secondaryColor": "#4ecdc4",
+    "backgroundColor": "rgba(0, 0, 0, 0.8)",
+    "textColor": "#ffffff",
+    "accentColor": "#f9ca24"
+  },
+  "animations": {
+    "enableParticles": true,
+    "enableGlow": true,
+    "enablePulse": true
+  }
+}
